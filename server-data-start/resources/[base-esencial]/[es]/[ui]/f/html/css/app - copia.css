@@ -1,0 +1,118 @@
+@font-face {
+    font-family: bankgothic;
+    src: url('../fonts/bankgothic.ttf');
+}
+
+@font-face {
+    font-family: pcdown;
+    src: url('../fonts/pdown.ttf');
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 20px;
+    font-family: Verdana;
+    min-width: 400px;
+    color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 50px 0px #000;
+    position: absolute;
+}
+
+.menu.align-left {
+    left: 40;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.menu.align-top-left {
+    left: 40;
+    top: 40;
+}
+
+.menu.align-top {
+    left: 50%;
+    top: 40;
+    transform: translate(-50%, 0);
+}
+
+.menu.align-top-right {
+    right: 10;
+    top: 40;
+}
+
+.menu.align-right {
+    right: 40;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+    right: 40;
+    bottom: 40;
+}
+
+.menu.align-bottom {
+    left: 50%;
+    bottom: 40;
+    transform: translate(-50%, 0);
+}
+
+.menu.align-bottom-left {
+    left: 40;
+    bottom: 40;
+}
+
+.menu.align-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .head {
+    background-image: url(https://i.imgur.com/1J3bQwN.png);
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    height: 90px;
+    line-height: 40px;
+}
+
+.menu .menu-items {
+    max-height: 600px;
+    overflow-y: hidden;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.menu .menu-items .menu-item {
+    height: 40px;
+    display: block;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.menu .menu-items .menu-item.selected {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.menu .menu-items .line {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-top: 2px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.menu .menu-items .line.selected {
+    background: linear-gradient(135deg, #00a2ff, #0400ff, #00d9ff);
+    animation: gradientBG 30s ease infinite;
+}
+
+@keyframes gradientBG {
+    from {
+        background-position: -3000px;
+    }
+    to {
+        background-position: 0px;
+    }
+}

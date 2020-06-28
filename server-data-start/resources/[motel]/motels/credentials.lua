@@ -1,0 +1,2 @@
+Config.Email      = "scarredsin@gmail.com" -- Your receipt is the 4 digit number found on your order at modit.store
+Config.Receipt    = "4600" -- Must be the same email you used to purchase the script with. Can check your receipt to verify.

@@ -1,0 +1,17 @@
+        '<div id="menu_{{_namespace}}_{{_name}}" class="menu{{#align}} align-{{align}}{{/align}}">' +
+        '<div class="head"><span>{{{title}}}</span></div>' +
+        '<div class="menu-items">' +
+        '{{#elements}}' +
+        '<div class="menu-item {{#selected}}selected{{/selected}}">' +
+        '{{{label}}}{{#isSlider}} : &lt;{{{sliderLabel}}}&gt;{{/isSlider}}' +
+        '<div class="line {{#selected}}selected{{/selected}}"></div>' +
+        '</div>' +
+        '{{/elements}}' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
+
+
+
+background-image: url(https://i.imgur.com/1J3bQwN.png);

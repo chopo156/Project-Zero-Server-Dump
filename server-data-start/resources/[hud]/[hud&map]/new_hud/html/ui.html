@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap"
+      id="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <title>PROJECT ZERO</title>
+  </head>
+
+  <body style="font-family: 'Montserrat'">
+    <div id="ui">
+      <!-- <div class="info server">
+        <div id="server"><img src="img/watermark.png" /></div>
+      </div> -->
+
+	<span id="uidStatus">
+		<div id="toggleMenu"  class="">
+				<div id="jobPlayer" class="info player">
+					<div id="job">
+						<span>Job</span>
+					</div>
+					<div id="jobgrade">
+						<span>Jobgrade</span>
+					</div>
+				</div>
+
+				<div id="money">
+					<div class="moneyblock" id="wallet">
+						<div class="icon">
+							<i class="fas fa-dollar-sign"></i>
+						</div>
+						<span class="text">0</span>
+					</div>
+					<div class="moneyblock" id="bank">
+						<div class="icon">
+							<i class="fas fa-university"></i>
+						</div>
+						<span class="text">0</span>
+					</div>
+					<div class="moneyblock" id="blackMoney">
+						<div class="icon">
+							<i class="fas fa-user-ninja"></i>
+						</div>
+						<span class="text">0</span class="text">
+					</div>
+					<div class="moneyblock" id="society">
+						<div class="icon">
+							<i class="fas fa-briefcase"></i>
+						</div>
+						<span class="text">0</span>
+					</div>
+				</div>
+
+			<div id="online">
+				<div class="onlineblock" id="police">
+						<div class="icon">
+							<i class="fas fa-police"><img src="img/online-police.png"></i>
+						</div>
+						<span class="text">0</span>
+				</div>
+				<div class="onlineblock" id="ems">
+						<div class="icon">
+							<i class="fas fa-briefcase-medical"></i>
+						</div>
+						<span class="text">1</span>
+				</div>
+				<div class="onlineblock" id="mechanic">
+						<div class="icon">
+							<i class="fas fa-wrench"></i>
+						</div>
+						<span class="text">2</span>
+				</div>
+				<div class="onlineblock" id="taxi">
+						<div class="icon">
+							<i class="fas fa-taxi"></i>
+						</div>
+						<span class="text">+3</span>
+				</div>
+				<div class="onlineblock" id="players">
+					<div class="icon">
+						<i class="fas fa-users"></i>
+					</div>
+					<span class="text">100</span>
+			</div>
+			</div>
+		</div>
+		<div id="infoPlayer" class="info player">
+			<div id="status">
+				<ul>
+					<li class="icon" id="thirst">
+					<i class="fas fa-tint"></i><span></span>
+					</li>
+					<li class="icon" id="hunger">
+					<i class="fas fa-utensils"></i><span></span>
+					</li>
+					<li class="icon" id="stamina">
+					<i class="fas fa-running"></i><span></span>
+					</li>
+					<li class="icon" id="armor">
+					<i class="fas fa-shield-alt"></i><span></span>
+					</li>
+					<li class="icon" id="health">
+					<i class="fas fa-heart"></i><span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+			<div class="info vehicle inactive animated faster">
+			<div id="speedometer">
+				<div id="progress-speed">
+					<svg viewBox="0 0 100 100">
+					<circle cx="50" cy="50" r="45" class="mask" />
+					<circle cx="50" cy="50" r="45" class="speed zero" />
+					</svg>
+				</div>
+
+				<div id="vehicle-speed">
+					<span>999</span>
+					<strong>KM/H</strong>
+				</div>
+
+				<div id="vehicle-gear" class="icon text">
+					<i><img src="img/vehicle-gear.png"/></i><span>N</span>
+				</div>
+
+				<div id="vehicle-others" class="icon" style="display:none;">
+					<i class="fas fa-biking"></i>
+				</div>
+
+				<div id="vehicle-status-left">
+					<ul>
+					<li class="icon off" id="seatbelt">
+						<i><img src="img/vehicle-seatbelt.png"/></i
+						><span style="height: 100%"></span>
+					</li>
+					<li class="icon" id="fuel">
+						<i class="fas fa-gas-pump"></i><span></span>
+					</li>
+					</ul>
+				</div>
+
+				<div id="vehicle-status-right">
+					<ul>
+					<li class="icon normal" id="lights">
+						<i><img src="img/vehicle-lights.png"/></i><span></span>
+					</li>
+					<li class="icon" id="signals" class="off">
+						<i class="fas fa-arrows-alt-h"></i
+						><span style="height: 100%"></span>
+					</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			<div class="info weapon animated faster unarmed" id="weapon" style="display:block;">
+					<div id="weapon_image">
+						<img src="img/weapons/pistol.png" alt="" />
+					</div>
+
+					<div id="weapon_bullets">
+						<div id="weapon_clip" class="clip"><span>999</span></div>
+						<div id="weapon_ammo" class="ammo"><span>999</span></div>
+					</div>
+
+					<div class="icon" id="bullets">
+						<i><img src="img/weapon-bullets.png" alt=""/></i>
+						<i class="clone"><img src="img/weapon-bullets.png" alt=""/></i>
+						<span></span>
+					</div>
+			</div>
+
+			<div class="info radio">
+				<div id="voicewrapper">
+					<div id="voiceback"></div>
+					<div id="voice" class="icon">
+						<i class="fas fa-microphone-alt"></i>
+					</div>
+				</div>
+			</div>
+
+				<div id="location-date" class="info time-and-place">
+				<div class="data">
+					<div id="location">
+						<span><strong>Aeropuerto de Los Santos</strong></span>
+					</div>
+				</div>
+				</div>
+
+				<audio id="sounds">
+				<source type="audio/ogg" />
+				</audio>
+		</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+ Author bt0r
+ Twitch : twitch.tv/bt0r
+ Twitter : twitter.com/biiitor
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <h1 class="enable_music">Pulsa <strong>espacio</strong> para desactivar la musica</h1>
+
+    <div id="loader">
+        <transition name="fade">
+            <div v-if="showed">
+                <img id="loadingCharacter" :src="characterImage" :class="characterClass">
+                <img id="loadingBackground" :src="backgroundImage" :class="backgroundClass">
+            </div>
+        </transition>
+        <img id="loadingLogo" src="img/logo.png">
+        <audio id="introSound" src="sound/intro.ogg" controls loop />
+    </div>
+    
+    <div class="progress"></div>
+
+    <audio id="leson" src="music/ogg.ogg" autoplay="true" hidden="true" loop="true"/>
+    <script src="js/loader.js">
+    
+    var play = false;
+    var myAudio = document.getElementById("leson");
+    
+    myAudio.volume = 0.1;
+
+    function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+      return false;
+    }
+
+    window.addEventListener("keydown", onKeyDown, false);
+    </script>
+
+    
+</body>
+</html>
